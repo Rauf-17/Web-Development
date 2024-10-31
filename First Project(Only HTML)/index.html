@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="This is my First HTML">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>HTML Learning</title>
+</head>
+<body style="background-color:ivory;">
+    
+    <!--Header Part Starts here-->
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="/about.html" target="_blank">About</a>
+        <a href="/contact.html" target="_blank">Contact</a>
+        <a href="https://www.google.com/"  target="_blank">Google</a>
+    </nav>
+
+    <!--Profile -->
+
+    <header>
+        <h1>Raufull Islam Rauf </h1>
+
+        <img src="./images/Profile.png" alt="Profile" height="100" width="100"> 
+
+        <h2><strong>Student</strong></h2>
+
+    </header>
+
+<hr>
+
+    <!--Main Part Starts-->
+
+    <main>
+
+        <!--Summery Part-->
+        
+        <section>
+            <h2>Summary</h2>
+            <p>Hi,myself, <strong>Raufull Islam Rauf</strong> . I'm currently studying in <em>AIUB</em> <u>CSE</u>. I'm Currently learning HTML for Academic and future life.
+            My favourite Programming language is <mark>C#</mark>. I'm on to my last year of bachelor's. </p>
+
+        </section>
+        
+        <!--Use of Unordered List-->
+
+        <section>
+            <h3> <i class="fa-solid fa-school"></i> <em>Education</em></h3>
+            <ul>
+                <li>
+                    <strong>BSc. Computer Science Engineering</strong> 
+                    <p>American International University-Bangladesh, Dhaka</p>
+                    <p>Grading Point: 3.94/4</p>
+                </li>
+                <li>
+                    <strong>Higher Secondary Certificate</strong> 
+                    <p>Bangladesh Navy Collage, Dhaka</p>
+                    <p>Grading Point: 5/5</p>
+                </li>
+           </ul>
+            
+
+        </section>
+        
+        <!--Use of Ordered and Direct List-->
+        
+        <section>
+            <h4> <i class="fa-solid fa-id-card-clip"></i> <em>Skills</em> </h4>
+
+            <ol type="I">
+                <li><strong>C++</strong>
+                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nihil tenetur repudiandae exercitationem magnam nobis dolores odio possimus voluptatibus iste nisi.</p>
+                </li>
+                <li> <strong>C#</strong> 
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolores, facere.</p>
+                </li>
+                <li> <strong>R</strong> 
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quis odit minus facilis reiciendis voluptate in molestiae fugiat iste quos. Ducimus assumenda voluptas rerum sapiente corrupti?</p>
+                <dl>
+                    <dt><strong>HTML CSS</strong></dt>
+                    <dd>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur quisquam adipisci enim modi, doloribus rerum quasi explicabo accusantium praesentium ipsam!</dd>
+                </dl>
+            </ol>
+        </section>
+
+        <!--Table Creation-->
+
+        <section>
+            <h4> <i class="fa-solid fa-school"></i> <em>Contact</em> </h4>
+
+            <table border="1">
+                <thead>
+                    <tr>
+                        <th> Through </th>
+                        <th> Address </th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Email</td>
+                        <td>rauf.shuvo3272@gmail.com</td>
+                    </tr>
+                    <tr>
+                        <td>Github</td>
+                        <td>Rauf-17</td>
+                    </tr>
+                </tbody>
+            </table>
+            <br>
+            <br>
+            <br>
+    
+            <!--Form Starts Here-->
+
+            <hr>
+    
+            <strong>Give Your Imformation Below</strong><br>
+    
+            <br>
+    
+            <form action="https://getform.io/f/bnllevlb" method="post" target="_blank">
+    
+                <div>
+                    <label for="Name">Name</label> <br>
+                    <input type="text" name="Name" id="Name" required> <br>
+                </div>
+                <br>
+                <div>
+                    <label for="Email">Email</label> <br>
+                    <input type="email" name="Email" id="Email" required> <br>
+                </div>
+                <br>
+                <div>
+                    <label for="Password">Password</label> <br>
+                    <input type="password" name="Password" id="Password" > <br>
+                </div>
+                <br>
+                <div>
+                    <label for="DoB">Date of Birth</label> <br>
+                    <input type="date" name="DoB" id="DoB" required> <br>
+                </div>
+                <br>
+
+                <!--Radio Button-->
+
+                <div>
+                    <span>Gender</span> <br>
+                    <input type="radio" name="Gender" id="Male" value="Male">
+                    <label for="Male">Male</label>
+    
+                    <input type="radio" name="Gender" id="Female" value="Female">
+                    <label for="Female">Female</label>
+    
+                    <input type="radio" name="Gender" id="Others" value="Others">
+                    <label for="Others">Others</label>
+                    
+                </div>
+    
+                <br>
+    
+                <!--For Text Area -->
+    
+                <div>
+                    <label for="Bio">Biography</label> <br>
+                    <textarea name="Bio" id="Bio" cols="40" rows="10" required></textarea>
+                </div>
+                
+                <br>
+                <button type="submit" aria-label="Submit Your Information">Submit</button>
+                <button type="reset" aria-label="Reset The Form"> Reset</button>
+            </form>
+
+        </section>
+
+
+        <hr>
+        <br><br><br>
+
+        <section>
+            <!--using Google map-->
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3651.6804832811126!2d90.41127922479225!3d23.758770838455963!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3755b87e380f6b99%3A0x62ec59505b3792c0!2sMirbag%2C%20Dhaka!5e0!3m2!1sen!2sbd!4v1729951064486!5m2!1sen!2sbd"
+            width="500" 
+            height="250" 
+            style="border:0;"
+            allowfullscreen="" 
+            loading="lazy"
+            title="map of my area"
+            referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+
+            <!--Youtube Connection-->
+            <p> Hear My Favourite Song 🎵 </p>
+            <iframe width="560" height="250" src="https://www.youtube.com/embed/dXiAlCvnOT0?si=Fmu2agNwNxhrfFZ1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+            <!--Local Store Music-->
+
+            <p>Let's Hear Another Song Through Audio </p>
+
+            <audio controls style="background-color:black ;">
+                <source src="/audio/The Weeknd - Save Your Tears (Official Music Video).mp3" type="audio/mp3" >
+                
+            </audio>
+
+            <p> <i class="fa-solid fa-check"></i> Developed by Rauf</p>
+            <p>Copyright &copy;2024</p>
+        </section>
+
+    </main>
+
+
+<!-- Footer With Link by using Icons -->
+
+    <footer>
+        <a href="https://www.facebook.com/profile.php?id=100009549156449" target="_blank"><i class="fa-brands fa-facebook"></i>Visit Facebook</a>
+        <a href="mailto: rauf.shuvo3272@gmail.com" target="_blank"><i class="fa-solid fa-envelope"></i>Send Mail</a>
+        <a href="https://www.linkedin.com/in/raufislam17/" target="_blank"><i class="fab fa-linkedin"></i>Visit LinkedIn</a>
+        <a href="https://x.com/rauf_shuvo" target ="_blank"><i class="fab fa-twitter"></i>Visit X</a>
+        <a href="https://github.com/Rauf-17/" target="_blank"><i class="fab fa-github"></i>Visit Github</a>
+
+    </footer>
+
+    <!--Body Part Ends here-->
+
+</body>
+</html>
