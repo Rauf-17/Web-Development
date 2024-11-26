@@ -1,0 +1,41 @@
+.box1 {
+    height: 100px;
+    width: 100px;
+    border: 1px solid rgb(0, 0, 0);
+    margin-bottom: 3px;
+    background-color:#D8125B;
+}
+
+.box2 {
+    height: 100px;
+    width: 50%;
+    border: 1px solid black;
+    background-color: #2C2E39;
+}
+
+.box22 {
+    width: 50%;
+    border: 1px solid black;
+    background-color: #3690da;
+}
+
+.box3 {
+    height: 600px;
+    width: 800px;
+    border: 1px solid black;
+    background-color: #c5310f;
+}
+
+main {
+    max-width: 1280px;
+    display: flex;
+    margin: auto;
+    gap: 6px;
+}
+
+.section2 {
+    display: flex;
+    gap: 6px;
+    justify-content: center;
+    margin-bottom: 6px;
+}
