@@ -3,6 +3,14 @@
     font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 
 }
+/* Main Page */
+main {
+    max-width: 1280px;
+    display: flex;
+    margin: auto;
+    gap: 6px;
+}
+/* Input and Select Style */
 input, select{
     padding: 5px;
     border: 2px solid #3E5879;
@@ -14,7 +22,7 @@ input, select{
 input:hover{
     background-color: lightgray;
 }
-
+/* Buttons */
 #button{
 
     background-color: #aa1a04;
@@ -30,22 +38,13 @@ input:hover{
 #button:hover{
     background-color: darkblue;
 }
-.box1 {
-    height: auto;
-    width: 900px;
-    border: 1px solid rgb(0, 0, 0);
-    margin: 10px;
-    background-color: #213555;
-    color: aliceblue;
-    padding: 10px;
-    border-radius: 10px;
-}
 #buttonAdd{
     background-color: green;
     color: aliceblue;
     padding: 10px;
     margin: 5px;
     justify-content: center;
+    width: 100%;
 
 }
 #buttonAdd:hover{
@@ -55,6 +54,7 @@ input:hover{
 #buttonRemove{
     background-color: red;
     color: aliceblue;
+    width: 100%;
     padding: 10px;
     margin: 5px;
     justify-content: center;
@@ -74,7 +74,17 @@ input:hover{
 #buttonUpdate:hover{
     background-color: darkgoldenrod;
 }
-
+/* All Boxes */
+.box1 {
+    height: auto;
+    width: 900px;
+    border: 1px solid rgb(0, 0, 0);
+    margin: 10px;
+    background-color: #213555;
+    color: aliceblue;
+    padding: 10px;
+    border-radius: 10px;
+}
 .box2 {
     height: auto;
     width: 50%;
@@ -119,6 +129,7 @@ input:hover{
     white-space: nowrap;
 
 }
+/* Token */
 .token-list {
     list-style-type: none;
     padding: 2px;
@@ -131,19 +142,14 @@ input:hover{
     margin: 1px;
 
 }
-main {
-    max-width: 1280px;
-    display: flex;
-    margin: auto;
-    gap: 6px;
-}
-
+/* Sections */
 .section2 {
     display: flex;
     gap: 6px;
     justify-content: center;
     margin-bottom: 6px;
 }
+/* Icons */
 i{
 
     color: #fff;

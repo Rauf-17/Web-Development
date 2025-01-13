@@ -1,5 +1,7 @@
 <?php
 
+//Add/Remove Book Form Validation and All Books Listing
+
 $conn = new mysqli("localhost", "root", "", "library_management");
 
 if ($conn->connect_error) {

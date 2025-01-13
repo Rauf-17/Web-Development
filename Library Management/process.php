@@ -1,4 +1,7 @@
 <?php
+
+//Borrow Book Form Validation and Invoice Printing
+
 ini_set('display_errors', 1);
 error_reporting(E_ALL);
 
@@ -101,10 +104,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 <button style="background-color: #28a745; color: white; border: none; padding: 12px 24px; margin: 10px; cursor: pointer; border-radius: 5px; font-size: 1rem;" onclick="window.print()">Print Invoice</button>
                 <button style="background-color: #6c757d; color: white; border: none; padding: 12px 24px; margin: 10px; cursor: pointer; border-radius: 5px; font-size: 1rem;" onclick="window.location.href=\'index.php\'">Back</button>
             </div>';
-
-
-
-
 
     }
 } else {

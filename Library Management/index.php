@@ -1,4 +1,11 @@
 <?php
+/* This is the main page of the library management system. It contains the list of all books, the form to add or remove a book, the form to edit a book, and the form to borrow a book. */ 
+?>
+
+
+<?php
+
+//SQL query to select all books from the database
 $conn = new mysqli("localhost", "root", "", "library_management");
 if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
@@ -19,8 +26,6 @@ if (file_exists('token.json')) {
     $json = file_get_contents('token.json');
     $tokens = json_decode($json, true);
 }
-
-
 ?>
 
 <!DOCTYPE html>
@@ -31,20 +36,47 @@ if (file_exists('token.json')) {
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="style.css">
     <title>Library Management</title>
+    
+<!-- Token Selection and Used Token-->
+    <script>
+    function selectToken(token) {
+        document.getElementById('token').value = token;
+        const tokenButton = document.getElementById('token-' + token);
+        tokenButton.style.display = 'none';
+
+        const usedTokenList = document.getElementById('used-token-list');
+        const newUsedToken = document.createElement('li');
+        newUsedToken.textContent = token;
+        usedTokenList.appendChild(newUsedToken);
+
+        let usedTokens = JSON.parse(localStorage.getItem('usedTokens')) || [];
+        usedTokens.push(token);
+        localStorage.setItem('usedTokens', JSON.stringify(usedTokens));
+    }
+
+    document.addEventListener('DOMContentLoaded', function() {
+        let usedTokens = JSON.parse(localStorage.getItem('usedTokens')) || [];
+        const usedTokenList = document.getElementById('used-token-list');
+        usedTokens.forEach(function(token) {
+            const newUsedToken = document.createElement('li');
+            newUsedToken.textContent = token;
+            usedTokenList.appendChild(newUsedToken);
+        });
+    });
+</script>
 </head>
 <body>
     <main>
+        <!-- Used Token section -->
         <aside class="box3">
-            <h2>Token Used</h2>
-            <ul class="token-list">
-                <?php foreach ($tokens as $token): ?>
-                    <li><strong><?php echo htmlspecialchars($token['token']); ?></strong></li>
-                <?php endforeach; ?>
+            <h2>Token Used</h2> <hr>
+            <ul class="token-list" id="used-token-list">
             </ul>
         </aside>
         <div>
+            <!-- All Books -->
             <section>
-            <div class="box1">
+                <div class="box1">
                     <h2 style="text-align: center; border: 2px aliceblue solid; background-color:cornflowerblue; color:black;">All Books</h2>
                     <ul>
                         <?php foreach ($books as $book): ?>
@@ -52,6 +84,7 @@ if (file_exists('token.json')) {
                         <?php endforeach; ?>
                     </ul>
                 </div>
+                <!-- Add & Remove Books -->
                 <div class="box1">
                     <h2 style="text-align: center; border: 2px aliceblue solid; background-color:cornflowerblue; color:black;">Add or Remove Book</h2>
                     <form action="add_remove_book.php" method="post">
@@ -59,10 +92,11 @@ if (file_exists('token.json')) {
                         <input type="text" name="author" placeholder="Author" required>
                         <input type="number" name="yearofpublication" placeholder="Year of Publication" required>
                         <input type="text" name="genre" placeholder="Genre" required>
-                        <button type="submit" name="action" value="add" id="buttonAdd"><b>Add Book</b></button>
-                        <button type="submit" name="action" value="remove" id="buttonRemove"><b>Remove Book</b></button>
+                        <button type="submit" name="action" value="add" id="buttonAdd"><b>Add</b></button>
+                        <button type="submit" name="action" value="remove" id="buttonRemove"><b>Remove</b></button>
                     </form>
                 </div>
+                <!-- Edit Book Info -->
                 <div class="box1">
                     <h2 style="text-align: center; border: 2px aliceblue solid; background-color:cornflowerblue; color:black;">Edit Book Information</h2>
                     <form action="edit_book.php" method="post">
@@ -75,6 +109,7 @@ if (file_exists('token.json')) {
                     </form>
                 </div>
             </section>
+            <!-- About Library -->
             <section class="section2">
                 <div class="box2">
                     <strong>About Library</strong> <br>
@@ -85,7 +120,6 @@ if (file_exists('token.json')) {
                 <div class="box2">
                     <strong>Here are some books in the A Song of Ice and Fire series:</strong> <br>
                     <ul style="list-style-type: square;">
-                        
                         <li>A Game of Thrones (1996)</li> 
                         <li>A Clash of Kings (1999) </li>
                         <li>A Storm of Swords (2000)</li> 
@@ -109,6 +143,7 @@ if (file_exists('token.json')) {
                     </ul>
                 </div>
             </section>
+            <!-- Borrow Book -->
             <section class="section2">
                 <div class="box22a">
                     <form action="process.php" method="post">
@@ -136,20 +171,18 @@ if (file_exists('token.json')) {
                         <b>Return date</b>
                         <br><input type="date" name="returndate" id="returndate" required><br>
                         <b>Token</b>
-                        <br><input type="text" placeholder="Token Number" name="token" id="token" required><br>
+                        <br><input type="text" placeholder="Choose from Availabe Tokens" name="token" id="token" disabled required><br>
                         <b>Fees</b>
                         <br><input type="text" placeholder="Fees" name="fees" id="fees" required><br> <br><br>
                         <button type="submit" name="submit" id="button"><b>Borrow</b></button>
                     </form>
                 </div>
 
+                <!-- Available Token Picking -->
                 <?php
                 if (file_exists('token.json')) {
-
                     $tokens_json = file_get_contents('token.json');
-
                     $tokens = json_decode($tokens_json, true);
-
                     if ($tokens === null) {
                         echo "Error decoding JSON.";
                     }
@@ -164,10 +197,9 @@ if (file_exists('token.json')) {
                         <?php if (isset($tokens) && is_array($tokens)): ?>
                             <?php foreach ($tokens as $token): ?>
                                 <?php if (isset($token['token'])): ?>
-                                    <button style=" background-color:cadetblue; color:black; padding:10px; margin:10px; width:75%; ">
-                                    <strong><?php echo $token['token']; ?></strong>
+                                    <button id="token-<?php echo $token['token']; ?>" style="background-color:cadetblue; color:black; padding:10px; margin:10px; width:75%;" onclick="selectToken('<?php echo $token['token']; ?>')">
+                                        <strong><?php echo $token['token']; ?></strong>
                                     </button><br>
-
                                 <?php endif; ?>
                             <?php endforeach; ?>
                         <?php else: ?>
@@ -175,13 +207,11 @@ if (file_exists('token.json')) {
                         <?php endif; ?>
                     </ul>
                 </div>
-
-
-
             </section>
         </div>
+        <!-- Developer Details -->
         <div class="box3">
-            <h2 style="text-align: center;">Developer Details</h2>
+            <h2 style="text-align: center;">Developer Details</h2> <hr>
             <img src="photos/Profile - Copy.png" alt="Profile" width="250px" height="250px" style="border-radius: 50%; border: 1px solid black;">
             <p>
                 <i class="fa-solid fa-user"></i> Raufull Islam Rauf  <br>
@@ -201,7 +231,6 @@ if (file_exists('token.json')) {
             <a href="https://www.linkedin.com/in/raufislam17/" target="_blank"><i class="fab fa-linkedin"></i></a>
             <a href="https://x.com/rauf_shuvo" target ="_blank"><i class="fab fa-twitter"></i></a>
             <a href="https://github.com/Rauf-17/" target="_blank"><i class="fab fa-github"></i></a>
-            
         </div>
     </main>
 </body>
