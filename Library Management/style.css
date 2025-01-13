@@ -39,7 +39,7 @@ input:hover{
     background-color: darkblue;
 }
 #buttonAdd{
-    background-color: green;
+    background-color: rgb(37, 31, 200);
     color: aliceblue;
     padding: 10px;
     margin: 5px;
@@ -48,11 +48,11 @@ input:hover{
 
 }
 #buttonAdd:hover{
-    background-color: darkgreen;
+    background-color: rgb(3, 8, 63);
 }
 
 #buttonRemove{
-    background-color: red;
+    background-color: rgb(218, 33, 33);
     color: aliceblue;
     width: 100%;
     padding: 10px;
