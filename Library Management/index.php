@@ -185,7 +185,7 @@ if (file_exists('token.json')) {
                         <b>Return date</b>
                         <br><input type="date" name="returndate" id="returndate" required><br>
                         <b>Token</b>
-                        <br><input type="text" placeholder="Choose from Availabe Tokens" name="token" id="token" disabled required><br>
+                        <br><input type="text" placeholder="Choose from Availabe Tokens" name="token" id="token" required><br>
                         <b>Fees</b>
                         <br><input type="text" placeholder="Fees" name="fees" id="fees" required><br> <br><br>
                         <button type="submit" name="submit" id="buttonBorow"><b>Borrow</b></button>
