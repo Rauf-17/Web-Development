@@ -6,13 +6,18 @@ ini_set('display_errors', 1);
 error_reporting(E_ALL);
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
+
+    if (isset($_POST['token']) && !empty($_POST['token'])) {
+        $token = $_POST['token'];
+    } else {
+        die("Token is required.");
+    }
     $studentname = $_POST['studentname'];
     $studentid = $_POST['studentid'];
     $email = $_POST['email']; 
     $bt = $_POST['booktitle'];
     $bd = $_POST['borrowdate'];
     $rn = $_POST['returndate'];
-    $tn = $_POST['token'];
     $fees = $_POST['fees'];
     
     $errors = [];
@@ -35,7 +40,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     if ($dateDiff > 10 || $dateDiff <= 0) {
         $errors[] = 'Borrow period must be between 1 and 10 days';
     }
-    if (!ctype_digit($tn)) {
+    if (!ctype_digit($token)) {
         $errors[] = 'Token Number must contain only numbers';
     }
     if (!is_numeric($fees) || $fees <= 0) {
