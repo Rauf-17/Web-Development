@@ -115,7 +115,6 @@ if (file_exists('token.json')) {
                 <div class="box1">
                     <h2 style="text-align: center; border: 2px aliceblue solid; background-color:cornflowerblue; color:black;">Edit Book Information</h2>
                     <form action="edit_book.php" method="post">
-                        <input type="number" name="id" placeholder="Book ID" required>
                         <input type="text" name="title" placeholder="New Title">
                         <input type="text" name="author" placeholder="New Author">
                         <input type="number" name="yearofpublication" placeholder="New Year of Publication">
