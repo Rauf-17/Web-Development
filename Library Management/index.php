@@ -77,12 +77,27 @@ if (file_exists('token.json')) {
             <!-- All Books -->
             <section>
                 <div class="box1">
-                    <h2 style="text-align: center; border: 2px aliceblue solid; background-color:cornflowerblue; color:black;">All Books</h2>
-                    <ul>
-                        <?php foreach ($books as $book): ?>
-                            <li><?php echo htmlspecialchars($book['title']) . " by " . htmlspecialchars($book['author']) . " at " . htmlspecialchars($book['yearofpublication']); ?></li>
-                        <?php endforeach; ?>
-                    </ul>
+                    <h2 style="text-align: center; border: 2px aliceblue solid; background-color: cornflowerblue; color: black;">All Books</h2>
+                    <table style="width: 100%; border: 1px solid black; border-collapse: collapse;">
+                        <thead>
+                            <tr>
+                                <th style="border: 1px solid black; padding: 8px; width: 25%;">Title</th>
+                                <th style="border: 1px solid black; padding: 8px; width: 25%;">Author</th>
+                                <th style="border: 1px solid black; padding: 8px; width: 25%;">Year of Publication</th>
+                                <th style="border: 1px solid black; padding: 8px; width: 25%;">Genre</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <?php foreach ($books as $book): ?>
+                                <tr>
+                                    <td style="border: 1px solid black; padding: 8px; text-align: center;"><?php echo htmlspecialchars($book['title']); ?></td>
+                                    <td style="border: 1px solid black; padding: 8px; text-align: center;"><?php echo htmlspecialchars($book['author']); ?></td>
+                                    <td style="border: 1px solid black; padding: 8px; text-align: center;"><?php echo htmlspecialchars($book['yearofpublication']); ?></td>
+                                    <td style="border: 1px solid black; padding: 8px; text-align: center;"><?php echo htmlspecialchars($book['genre']); ?></td>
+                                </tr>
+                            <?php endforeach; ?>
+                        </tbody>
+                    </table>
                 </div>
                 <!-- Add & Remove Books -->
                 <div class="box1">
