@@ -189,7 +189,7 @@ if (file_exists('token.json')) {
                         <br><input type="text" placeholder="Choose from Availabe Tokens" name="token" id="token" disabled required><br>
                         <b>Fees</b>
                         <br><input type="text" placeholder="Fees" name="fees" id="fees" required><br> <br><br>
-                        <button type="submit" name="submit" id="button"><b>Borrow</b></button>
+                        <button type="submit" name="submit" id="buttonBorow"><b>Borrow</b></button>
                     </form>
                 </div>
 
@@ -212,7 +212,7 @@ if (file_exists('token.json')) {
                         <?php if (isset($tokens) && is_array($tokens)): ?>
                             <?php foreach ($tokens as $token): ?>
                                 <?php if (isset($token['token'])): ?>
-                                    <button id="token-<?php echo $token['token']; ?>" style="background-color:cadetblue; color:black; padding:10px; margin:10px; width:75%;" onclick="selectToken('<?php echo $token['token']; ?>')">
+                                    <button id="token-<?php echo $token['token']; ?>" style="background-color:darkslateblue; color:white; padding:10px; margin:10px; width:75%;" onclick="selectToken('<?php echo $token['token']; ?>')">
                                         <strong><?php echo $token['token']; ?></strong>
                                     </button><br>
                                 <?php endif; ?>
