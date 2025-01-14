@@ -8,7 +8,6 @@ if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 }
 
-$id = $_POST['id'];
 $title = $_POST['title'];
 $author = $_POST['author'];
 $yearofpublication = $_POST['yearofpublication'];
@@ -29,7 +28,7 @@ if (!empty($genre)) {
 }
 
 if (!empty($updateFields)) {
-    $sql = "UPDATE books SET " . implode(", ", $updateFields) . " WHERE id='$id'";
+    $sql = "UPDATE books SET " . implode(", ", $updateFields) . " WHERE title='$title'";
     if ($conn->query($sql) === TRUE) {
         echo "Record updated successfully";
     } else {
