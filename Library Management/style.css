@@ -23,7 +23,7 @@ input:hover{
     background-color: lightgray;
 }
 /* Buttons */
-#button{
+#buttonBorrow{
 
     background-color: #aa1a04;
     border: 1px solid black;
@@ -33,9 +33,10 @@ input:hover{
     margin: 4px 2px;
     cursor: pointer;
     float: right;
-    width: 100%;
+    width: 33%;
+    border-radius: 10px;
 }
-#button:hover{
+#buttonBorrow:hover{
     background-color: darkblue;
 }
 #buttonAdd{
@@ -64,15 +65,17 @@ input:hover{
     background-color: darkred;
 }
 #buttonUpdate{
-    background-color: burlywood;
-    color: black;
+    background-color: rgb(5, 175, 39);
+    color: white;
     padding: 10px;
     margin: 5px;
     justify-content: center;
+    width: 25%;
+    border-radius: 10px;
 
 }
 #buttonUpdate:hover{
-    background-color: darkgoldenrod;
+    background-color: rgb(4, 96, 18);
 }
 /* All Boxes */
 .box1 {
