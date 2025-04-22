@@ -16,14 +16,13 @@
 }
 
 
-
 nav{
     position: fixed;
     z-index: 1;
     top: 0%;
     left: 0%;
     width: 100%;
-    background-color: rgb(19, 168, 170);
+    background-color: rgb(5, 133, 135);
       
 }
 nav ul{
@@ -31,7 +30,7 @@ nav ul{
     gap: 1rem;
 }
 .nav__link{
-    color: black;
+    color: rgb(64, 19, 19);
     text-align: center;
     transition: all 0.4s linear 0.1s 0.5s;
     color: rgb(255, 255, 255);
@@ -125,7 +124,7 @@ main{
     align-items: center;
 }
 .team-member{
-    background-color: rgb(255, 255, 255);
+    background-color: rgb(79, 207, 65);
     padding: var(--padding);
     color: black;
     border-radius: 1rem;
@@ -207,8 +206,7 @@ footer{
     }
     .tutorial{
         width: 50%;
-        padding: 1rem;
-        width: 80%;
+        padding: 5px;
     }
   
     .team-members{
@@ -223,3 +221,56 @@ footer{
     }
 }
 /* Responsiveness Ends Here  */
+
+/* Animation Starts */
+
+.parent-div{
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+.circle-div{
+    width: 12rem;
+    height: 12rem;
+    border-radius: 50%; /* To make Circle the width and height need to be similar and radius is 50%*/
+    background-color: rgb(5, 133, 135);
+    color: rgb(0, 0, 0);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation-name: circle-animation;
+    animation-duration: 3s;
+    animation-iteration-count: infinite; /* infinite means it will run forever */
+    animation-direction: alternate; /* It will run in alternate direction */
+    animation-timing-function: ease-in-out;
+    position: relative;
+}
+
+@keyframes circle-animation{
+    0%{
+        transform: scale(1);
+        background-color: rgb(5, 133, 135);
+        top: 100px;
+        left: 0px;
+
+    }
+    50%{
+        transform: scale(1.2);
+        background-color: rgb(168, 12, 139);
+        top: 0px;
+        left: 0px;
+    }
+    100%{
+        transform: scale(1);
+        background-color: rgb(207, 0, 0);
+        top: 100px;
+        left: 0px;
+    }
+    
+}
+
+/* animation fucntion in line = animation: circle-animation 3s infinite alternate ease-in-out; */
+
+/* Animation Ends */
