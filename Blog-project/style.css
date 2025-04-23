@@ -1,0 +1,268 @@
+/* reset and common code starts here */
+:root{
+    --padding: 1rem; 
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style-type: none;
+    text-decoration: none;
+    font-weight: 400;
+}
+html{
+    background-color: #f0f0f0;  
+    scroll-behavior: smooth;
+    font-size: 62.5%; /* rem to px , now 1rem = 10px instead of 16px*/
+    font-family: 'roboto', sans-serif;
+
+}
+
+body{
+    background-color: #fff;
+    max-width: 100rem;
+    max-width:100%;
+    margin: auto;
+    box-shadow: 0.1rem 0.1rem 0.5rem rgba(0, 0, 0, 0.1), -0.1rem 0.1rem 0.5rem rgba(0, 0, 0, 0.1);
+
+}
+.test-justify{
+    text-align: justify;
+}
+.text-white{
+    color: white;
+}
+
+.btn{
+    background-color: #19042a;
+    color: white;
+    padding: 1rem;
+    border-radius: 0.2rem;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    text-transform: uppercase;
+    justify-content: center;
+}
+
+/* reset and common code ends here */
+
+/* Header Starts here */
+
+header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: black;
+    color: rgb(255, 255, 255);
+    padding: var(--padding);
+    position: sticky;
+    top: 0px;
+    z-index: 10;
+    min-height: 5vh;
+
+}
+
+.section-heading{
+    font-size: 4rem;
+    color: #000000;
+    font-family: "Italiana", cursive;
+    text-align: center;
+}
+.section-center{
+    display: flex;
+    flex-direction: column;
+    min-height: 80vh;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+
+
+i{
+    font-size: 2.5rem;
+    color: white;
+}
+.logo-figure{
+    border: 1px solid white;
+}
+nav ul{
+    display: flex;
+    gap: 2rem;
+    font-size: 1.2rem;
+    
+}
+nav ul li{
+    padding: var(--padding);
+    transition: all 0.3s ease-in-out;
+}
+
+nav ul li:hover{
+    background-color: #1c0576;
+    color: white;
+    border-radius: 0.5rem;
+}
+.nav__link{
+    font: 1.8rem;
+    color: white;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+/* Header Ends here */
+
+/* Banner Starts here */
+
+.banner{
+    padding: var(--padding);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 80vh;
+}
+.banner__article{
+    flex-basis: 50%;
+    
+}
+.banner__heading{
+    display: inline-block;
+    padding: var(--padding);
+    background-color: black;
+    color: white;
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+.banner__description{
+    font-size: 1.5rem;
+    line-height: 1;
+    margin-bottom: 2rem;
+    text-align: justify;
+
+}
+.banner aside{
+    flex-basis: 50%;
+    text-align: center;
+}
+.banner__img{
+    width: 40rem;
+    height: 40rem;
+    border: 3px solid black;
+
+}
+
+/* Banner Ends here */
+
+/* About Me starts here */
+
+#blog-about{
+    background-color: #bbeadb;
+}
+.cards{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+}
+.card{
+    flex: 1;
+    border-radius: 0.5rem;
+    background-color: #4e5aff;
+    padding: 3rem 1rem;
+    color: rgb(0, 0, 0);
+    margin: 2rem ;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.6rem;
+}
+
+.card:hover{
+    transform: scale(1.1);
+    box-shadow: 0.1rem 0.1rem 0.5rem rgba(0, 0, 0, 0.1), -0.1rem 0.1rem 0.5rem rgba(0, 0, 0, 0.1);
+}
+.card__header{
+    font-size: 2rem;
+}
+.card__description{
+    padding: 0.4rem;
+    font-size: 1.3rem;
+    margin-bottom: 0.6rem;
+    text-align: center;
+
+}
+.card__btn{
+    width: 50%;
+}
+
+/* About me Ends here */
+
+/* Responsiveness Starts here */
+
+@media screen and (max-width: 992px) {
+
+    .banner__article{
+        flex-direction: column;
+    }
+    .banner__article{
+        width: 50%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 1rem;
+    }
+}
+@media screen and (max-width: 768px) {
+    
+    html{
+        font-size: 55.5%;
+    }
+    .banner{
+        flex-direction: column;
+        width: 50%;
+    }
+    .banner__article{
+        width: 80%;
+    }
+    .cards{
+        width: 80%;
+        flex-direction: column;
+    }
+}
+@media screen and (max-width: 600px) {
+    
+    html{
+        font-size: 50%;
+        
+    }
+    header{
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    nav ul{
+        flex-direction: column;
+        padding-left: 2.5rem;
+    }
+    .banner{
+        min-height: auto;
+
+    }
+    .banner__article{
+        width: 100%;
+
+    }
+    .banner__img{
+        max-width: 100%;
+        height: auto;
+    }
+    #blog-about{
+        min-height: auto;
+    }
+    .cards{
+        width: 90%;
+        flex-direction: column;
+    }
+    
+}
+
+/* Responsiveness Ends here */
+
