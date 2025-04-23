@@ -101,6 +101,7 @@ nav ul li:hover{
     background-color: #1c0576;
     color: white;
     border-radius: 0.5rem;
+    transform: scale(1.1);
 }
 .nav__link{
     font: 1.8rem;
