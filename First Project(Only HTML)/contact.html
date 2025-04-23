@@ -3,9 +3,156 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Contact Page</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        body {
+            background-color: #181818;
+            color: #e0e0e0;
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        h2 {
+            color: #0ff;
+            text-align: center;
+            font-size: 36px;
+            text-shadow: 0 0 10px #0ff;
+            margin-top: 50px;
+        }
+
+        nav {
+            background-color: #121212;
+            padding: 20px;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        nav a {
+            color: #0ff;
+            margin: 0 20px;
+            font-size: 18px;
+            text-decoration: none;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            transition: color 0.3s ease-in-out;
+        }
+
+        nav a:hover {
+            color: #ff00ff;
+            text-shadow: 0 0 15px #ff00ff, 0 0 30px #ff00ff, 0 0 45px #ff00ff;
+        }
+
+        section {
+            margin: 0 20px;
+        }
+
+        section h3 {
+            font-size: 28px;
+            color: #0ff;
+            text-shadow: 0 0 10px #0ff;
+            margin-bottom: 20px;
+        }
+
+        section p {
+            font-size: 18px;
+            line-height: 1.6;
+            color: #e0e0e0;
+        }
+
+        .form-container {
+            background-color: #121212;
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0 0 10px #00ff00;
+            margin-top: 30px;
+        }
+
+        .form-container input, .form-container textarea {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 2px solid #00ff00;
+            background-color: #181818;
+            color: #e0e0e0;
+            border-radius: 5px;
+            font-size: 16px;
+            box-sizing: border-box;
+        }
+
+        .form-container input[type="submit"] {
+            background-color: #0ff;
+            color: #181818;
+            border: none;
+            cursor: pointer;
+            font-size: 18px;
+            transition: background-color 0.3s ease;
+        }
+
+        .form-container input[type="submit"]:hover {
+            background-color: #ff00ff;
+        }
+
+        footer {
+            background-color: #121212;
+            padding: 20px;
+            text-align: center;
+        }
+
+        footer a {
+            color: #ff00ff;
+            margin: 0 15px;
+            font-size: 20px;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        footer a:hover {
+            color: #0ff;
+            text-shadow: 0 0 15px #0ff;
+        }
+    </style>
 </head>
 <body>
-    <h2>I'm Contact Page</h2>
+
+    <!--Navigation-->
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+    </nav>
+
+    <!--Main Content-->
+    <section>
+        <h2>Contact Page</h2>
+        <h3>Get in Touch</h3>
+        <p>If you have any questions or just want to say hi, feel free to reach out!</p>
+        
+        <!--Contact Form-->
+        <div class="form-container">
+            <form action="https://getform.io/f/bnllevlb" method="post" target="_blank">
+                <label for="name">Your Name</label>
+                <input type="text" id="name" name="Name" required>
+
+                <label for="email">Your Email</label>
+                <input type="email" id="email" name="Email" required>
+
+                <label for="message">Your Message</label>
+                <textarea id="message" name="Message" rows="5" required></textarea>
+
+                <input type="submit" value="Send Message">
+            </form>
+        </div>
+    </section>
+
+    <!--Footer-->
+    <footer>
+        <a href="https://www.facebook.com/profile.php?id=100009549156449" target="_blank"><i class="fa-brands fa-facebook"></i> Facebook</a>
+        <a href="mailto: rauf.shuvo3272@gmail.com" target="_blank"><i class="fa-solid fa-envelope"></i> Email</a>
+        <a href="https://www.linkedin.com/in/raufislam17/" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a>
+        <a href="https://github.com/Rauf-17/" target="_blank"><i class="fab fa-github"></i> GitHub</a>
+    </footer>
+
 </body>
 </html>

@@ -3,9 +3,155 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>About Page</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        body {
+            background-color: #181818;
+            color: #e0e0e0;
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        h2 {
+            color: #0ff;
+            text-align: center;
+            font-size: 36px;
+            text-shadow: 0 0 10px #0ff;
+            margin-top: 50px;
+        }
+
+        nav {
+            background-color: #121212;
+            padding: 20px;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        nav a {
+            color: #0ff;
+            margin: 0 20px;
+            font-size: 18px;
+            text-decoration: none;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            transition: color 0.3s ease-in-out;
+        }
+
+        nav a:hover {
+            color: #ff00ff;
+            text-shadow: 0 0 15px #ff00ff, 0 0 30px #ff00ff, 0 0 45px #ff00ff;
+        }
+
+        section {
+            margin: 0 20px;
+        }
+
+        section h3 {
+            font-size: 28px;
+            color: #0ff;
+            text-shadow: 0 0 10px #0ff;
+            margin-bottom: 20px;
+        }
+
+        section p {
+            font-size: 18px;
+            line-height: 1.6;
+            color: #e0e0e0;
+        }
+
+        .bio-container {
+            background-color: #121212;
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0 0 10px #00ff00;
+            margin-top: 30px;
+        }
+
+        .bio-container h4 {
+            font-size: 24px;
+            color: #ff00ff;
+            text-shadow: 0 0 10px #ff00ff;
+        }
+
+        .bio-container p {
+            font-size: 16px;
+            color: #e0e0e0;
+        }
+
+        footer {
+            background-color: #121212;
+            padding: 20px;
+            text-align: center;
+        }
+
+        footer a {
+            color: #ff00ff;
+            margin: 0 15px;
+            font-size: 20px;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        footer a:hover {
+            color: #0ff;
+            text-shadow: 0 0 15px #0ff;
+        }
+    </style>
 </head>
 <body>
-    <h2>I'm About Page</h2>
+
+    <!--Navigation-->
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+    </nav>
+
+    <!--Main Content-->
+    <section>
+        <h2>About Me</h2>
+
+        <!--Short Bio Section-->
+        <div class="bio-container">
+            <h4><i class="fa-solid fa-user"></i> My Journey</h4>
+            <p>Hi, I'm <strong>Raufull Islam Rauf</strong>, a Computer Science student from Bangladesh. I have a deep passion for technology, particularly in the fields of AI and machine learning. Currently, I'm learning web development and exploring new technologies to stay ahead in the tech world.</p>
+        </div>
+
+        <!--Skills Section-->
+        <div class="bio-container">
+            <h4><i class="fa-solid fa-cogs"></i> Skills</h4>
+            <p>I have hands-on experience with the following programming languages and technologies:</p>
+            <ul>
+                <li><strong>C++</strong> - Expertise in object-oriented programming and algorithms.</li>
+                <li><strong>C#</strong> - Strong knowledge of C# for developing software applications.</li>
+                <li><strong>JavaScript</strong> - Passionate about full-stack web development using modern JavaScript frameworks.</li>
+                <li><strong>HTML/CSS</strong> - Skilled in designing beautiful and responsive web pages.</li>
+                <li><strong>Python</strong> - Knowledge of Python for data analysis and AI applications.</li>
+            </ul>
+        </div>
+
+        <!--Interests Section-->
+        <div class="bio-container">
+            <h4><i class="fa-solid fa-heart"></i> Interests</h4>
+            <p>Outside of programming, I enjoy:</p>
+            <ul>
+                <li>Exploring new technologies and reading tech blogs.</li>
+                <li>Watching sci-fi movies and gaming.</li>
+                <li>Photography and capturing moments in nature.</li>
+                <li>Listening to music, especially futuristic and synthwave tracks.</li>
+            </ul>
+        </div>
+    </section>
+
+    <!--Footer-->
+    <footer>
+        <a href="https://www.facebook.com/profile.php?id=100009549156449" target="_blank"><i class="fa-brands fa-facebook"></i> Facebook</a>
+        <a href="mailto: rauf.shuvo3272@gmail.com" target="_blank"><i class="fa-solid fa-envelope"></i> Email</a>
+        <a href="https://www.linkedin.com/in/raufislam17/" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a>
+        <a href="https://github.com/Rauf-17/" target="_blank"><i class="fab fa-github"></i> GitHub</a>
+    </footer>
+
 </body>
 </html>
